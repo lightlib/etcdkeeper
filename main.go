@@ -131,7 +131,7 @@ func main() {
 
 	//
 
-	http.Handle("/", AssetHandler("/", Assets, "./assets/etcdkeeper")) // view static directory
+	http.Handle("/", AssetHandler("/", Assets, "./assets")) // view static directory
 
 	log.Printf("listening on %s:%d\n", *host, *port)
 	err = http.ListenAndServe(*host+":"+strconv.Itoa(*port), nil)
